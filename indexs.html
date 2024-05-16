@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        
+        <nav>
+            <div>
+                <img src="logo.png" alt="">
+            </div>
+            
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Cart</a></li>
+                    
+                </ul>
+            </div>
+           
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="mobile.png" alt="" class="mobile">
+            <div id="circale">
+                <div class="feature one">
+                    <img src="camera.png" alt="">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="processor.png" alt="">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-Core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="display.png" alt="">
+                    <div>
+                        <h1>Display</h1>
+                        <p>7.9 , Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="battery.png" alt="">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>5000 MAH  , 720HRS Standby</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="controls">
+            <img src="arrow.png" alt="" id="upbtn">
+            <h2>features</h2>
+            <img src="arrow.png" alt="" id="downbtn">
+        </div>
+    </div>
+     
+
+    <script>
+        var circale =  document.getElementById("circale");
+        var upbtn =  document.getElementById("upbtn");
+        var downbtn =  document.getElementById("downbtn");
+
+        var rotateValue = circale.style.transform;
+
+        var rotateSum ;
+
+        upbtn.onclick =function(){
+            rotateSum =rotateValue + "rotate(-90deg)";
+            circale.style.transform =rotateSum;
+            rotateValue = rotateSum ;
+        }
+        downbtn.onclick =function(){
+            rotateSum =rotateValue + "rotate(90deg)";
+            circale.style.transform =rotateSum;
+            rotateValue = rotateSum ;
+        }
+
+    </script>
+</body>
+</html>
